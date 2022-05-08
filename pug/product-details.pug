@@ -1,0 +1,119 @@
+extends index.pug
+block pageTitle
+    title تفاصيل المنتج
+block pageBody 
+    .path-page
+        .container 
+            block pathTitle 
+                .path-title
+                    a(href="../products.html" , calss="all-products-link") جميع المنتجات
+                    span.pipe |
+                    span.perf العطور
+                    span.pipe |
+                    h2.all-products-titl عطر روز مسك                    
+    block pageContent
+        .product-details-page-box
+            .container
+                .product-details-content 
+                    .product-details-img 
+                        a.img-per-linke(href="../product-details.html") 
+                            img(src="../assets/images/pizza.jpg", alt="Product Details")
+                    .product-details-informations
+                        h1.perfume-name بيتزا مارجريتا 
+                        p.perfume-price $8.99
+                        .perfume-description-box
+                            p.perfume-description-title الوصف 
+                            p.perfume-description هي بيتزا نابولي النموذجية والمصنوعة من طماطم سان مارزانو و جبن موتزاريلا والريحان الطازج والملح وزيت الزيتون البكر
+                        
+                        .perfume-size-and-quantity-box
+                            .perfume-size-box
+                                p.perfume-size-title الحجم
+                                p.perfume-size وسط
+                                
+                            .perfume-quantity-box
+                                p.perfume-quantity-title الكمية
+                                .counter
+                                    span.down(onclick='decreaseCount(event, this)') -
+                                    input(type='text' value='1')
+                                    span.up(onclick='increaseCount(event, this)') +
+                        button.add-to-cart
+                            svg.cart 
+                                use(href="../assets/images/icons/icon.svg#cart")
+                            p.add-to-cart-title أضف للعربة
+                                    //- Start The Most Ordered Section 
+        .most-order-section.product-details-most#mostOrdered
+            .container 
+                +sectionIntro("منتجات ذات صلة","المنتجات ذات الصلة لدى سوفت فود تميز معنا")
+                .most-ordered-boxes.row
+                    .col-sm-6.col-lg-3
+                        .most-order-item 
+                            .most-order-img-box
+                                .ms-img-box 
+                                    a(href="../product-details.html") 
+                                        img(src="../assets/images/pizza.jpg", alt="Most perfume ordered" , class="img-dims")
+                            .most-content
+                                .perfume-name-and-size
+                                    .perfume-name بيتزا مارجريت
+                                    .perfume-size (مُتوفر)
+                                .perfume-price-box
+                                    .perfume-old-price $11
+                                    .perfume-price $8.99
+                                button.add-to-cart
+                                    svg.cart 
+                                        use(href="../assets/images/icons/icon.svg#cart")
+                                    p.add-to-cart-title أضف للعربة
+
+                    .col-sm-6.col-lg-3
+                        .most-order-item 
+                            .most-order-img-box
+                                .ms-img-box 
+                                    a(href="../product-details.html") 
+                                        img(src="../assets/images/pizza.jpg", alt="Most perfume ordered" , class="img-dims")
+                            .most-content
+                                .perfume-name-and-size
+                                    .perfume-name بيتزا مارجريتا
+                                    .perfume-size (مُتوفر)
+                                .perfume-price-box
+                                    .perfume-old-price $11
+                                    .perfume-price $8.99
+                                button.add-to-cart
+                                    svg.cart 
+                                        use(href="../assets/images/icons/icon.svg#cart")
+                                    p.add-to-cart-title أضف للعربة
+
+                    .col-sm-6.col-lg-3
+                        .most-order-item 
+                            .most-order-img-box
+                                .ms-img-box 
+                                    a(href="../product-details.html") 
+                                        img(src="../assets/images/pizza.jpg", alt="Most perfume ordered" , class="img-dims")
+                            .most-content
+                                .perfume-name-and-size
+                                    .perfume-name بيتزا مارجريتا
+                                    .perfume-size (مُتوفر)
+                                .perfume-price-box
+                                    .perfume-old-price $11
+                                    .perfume-price $8.99
+                                button.add-to-cart
+                                    svg.cart 
+                                        use(href="../assets/images/icons/icon.svg#cart")
+                                    p.add-to-cart-title أضف للعربة
+
+                    .col-sm-6.col-lg-3
+                        .most-order-item 
+                            .most-order-img-box
+                                .ms-img-box 
+                                    a(href="../product-details.html") 
+                                        img(src="../assets/images/pizza.jpg", alt="Most perfume ordered" , class="img-dims")
+                            .most-content
+                                .perfume-name-and-size
+                                    .perfume-name بيتزا مارجريتا
+                                    .perfume-size (مُتوفر)
+                                .perfume-price-box
+                                    .perfume-old-price $11
+                                    .perfume-price $8.99
+                                button.add-to-cart  
+                                    svg.cart 
+                                        use(href="../assets/images/icons/icon.svg#cart")
+                                    p.add-to-cart-title أضف للعربة
+        //- End The Most Ordered Section  

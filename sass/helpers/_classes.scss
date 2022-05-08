@@ -1,0 +1,389 @@
+// Import Colors
+@use './sass/variables/colors' as *;
+// Import Mixins
+@use './sass/helpers/mixins' as *;
+// Import Global Rules 
+@use './sass/layout/global-rules' as *;
+//
+// Start Direction Class
+// $dir:rtl;
+// End Direction Class
+// Start Toggle
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 50px;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 8%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: none;
+}
+
+.nav-bar button:focus {
+    outline: none;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 8%);
+}
+
+.toggle span {
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background-color: $main_color;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+
+.toggle {
+    &:not(&.collapsed) {
+        span {
+            &:nth-child(3) {
+                width: 40px;
+                left: 100px;
+            }
+            &:nth-child(2) {
+                transform: translateY(15px) rotate(-45deg);
+                top: 9px;
+            }
+            &:nth-child(1) {
+                transform: translateY(15px) rotate(45deg);
+                top: 9px;
+            }
+        }
+    }
+    &.collapsed {
+        span {
+            &:nth-child(3) {
+                left: 10px;
+            }
+            &:nth-child(2) {
+                transform: translateY(15px);
+                width: 15px;
+                left: 10px;
+            }
+            &:nth-child(1) {
+                transform: translateY(-15px);
+                width: 25px;
+                left: 10px;
+            }
+        }
+    }
+}
+
+// End Toggle
+// Start Main Title
+// End Main Title
+// Start Section Title 
+// End Section Title
+// Start Image Border Radius
+.img-border {
+    border-radius: 8px;
+}
+
+// End Image Border Radius
+// Start Order Cart 
+.order-cart {
+    width: 32px;
+    height: 25px;
+}
+
+.best-cart {
+    width: 24px;
+    height: 20px;
+}
+
+// End Order Cart
+// Start perfume Img Dims 
+.img-dims {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+// End perfume Img Dims 
+// start Svg 
+svg {
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.nav-cart {
+    width: 15.2px;
+    height: 19px;
+}
+
+.search {
+    width: 20.48px;
+    height: 20.48px;
+}
+
+.cart {
+    width: 11.4px;
+    height: 14.5px;
+}
+
+.flag {
+    width: 20.48px;
+    height: 20.48px;
+    border-radius: 50%;
+}
+
+// End Svg 
+// Start Discover Btn 
+.btn-discover {
+    position: relative;
+    font-weight: 400;
+    font-size: 17px;
+    width: 129px;
+    height: 129px;
+    border: 1px solid $main_color;
+    border-radius: 50%;
+    background: linear-gradient(139.78deg, #D2973D 10.46%, #C5A46F 87.55%);
+    transition: all 0.5s;
+    overflow: hidden;
+    a {
+        @include centering;
+        width: 100%;
+        height: 100%;
+        color: $white;
+        text-decoration: none;
+        transition: all 0.5s;
+        background-image: url(../../assets/images/sparks.png);
+    }
+    &:hover {
+        background: $balck;
+        a {
+            color: $main_color;
+        }
+    }
+    @media($max_phone) {
+        height: 95px;
+        width: 95px;
+        a {
+            font-size: 14px;
+        }
+    }
+}
+
+// End Discover Btn 
+// Start Setion Title 
+.section-box-title {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    .section-title-bg {
+        position: absolute;
+        top: -19px;
+        @if($dir==rtl) {
+            left: 60%;
+            transform: translateX(-60%);
+        }
+    }
+    .section-title {
+        color: $main_color;
+        font-weight: 700;
+        font-size: 30px;
+        text-transform: uppercase;
+    }
+    .section-explane-title {
+        font-size: 18px;
+        font-weight: 400;
+        color: $gray;
+    }
+}
+
+// End Setion Title 
+// Start Add To Cart Btn 
+.add-to-cart {
+    @include centering;
+    width: 100%;
+    outline: none;
+    border: 1px solid $main_color;
+    background: transparent;
+    color: $main_color;
+    height: 38px;
+    border-radius: 3px;
+    margin-bottom: 14px;
+    .add-to-cart-title {
+        margin: 0;
+    }
+    .cart {
+        fill: $main_color;
+        transition: all 0.3s;
+        margin: 0;
+        margin-right: 5px;
+    }
+    &:hover {
+        background-color: $main_color;
+        color: $white;
+        .cart {
+            fill: $white;
+        }
+    }
+}
+
+// End Add To Cart Btn 
+// Start Counter Products 
+.counter {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    input {
+        width: 99px;
+        height: 30.12px;
+        border: 0;
+        line-height: 30px;
+        font-size: 20px;
+        text-align: center;
+        background: transparent;
+        appearance: none;
+        outline: 0;
+        margin: 0 4px;
+        border-radius: 2px;
+        color: $white;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.06);
+        border: 1px solid rgba(234, 234, 234, 0.5);
+        font-weight: 700;
+        font-size: 15.0588px;
+        color: $main_color;
+    }
+    span {
+        display: block;
+        cursor: pointer;
+        color: $white;
+        background-color: rgba(234, 234, 234, 0.72);
+        user-select: none;
+        width: 30.12px;
+        height: 30.12px;
+        @include centering;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 2px;
+    }
+}
+
+// End Counter Products 
+//Start Order Now
+.order-now {
+    width: 154px;
+    height: 41px;
+    background-color: $main_color;
+    margin: auto;
+    border-radius: 3px;
+    margin-top: 48px;
+    a {
+        width: 100%;
+        height: 100%;
+        color: $white;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 14px;
+        @include centering;
+    }
+}
+
+//End Order Now
+// Start Log-and-send-link-btn
+.log-page-link {
+    width: 100%;
+    height: 51px;
+    border-radius: 3px;
+    overflow: hidden;
+    button {
+        border: 1px solid $main_color;
+        background-color: $main_color;
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;
+        @include centering;
+        color: $white;
+        font-weight: 400;
+        font-size: 15px;
+        text-decoration: none;
+        &:hover {
+            background-color: transparent;
+        }
+    }
+}
+
+.send-message {
+    @extend .log-page-link;
+}
+
+// Start Log-and-send-link-btn
+// Start Sub Pages Path Img 
+.path-page {
+    background-image: url(../images/footer-bg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 142px;
+    .container {
+        height: 100%;
+        .path-title {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+// End Sub Pages Path Img
+// Start Form 
+.form-subject {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 26px;
+    label {
+        margin-bottom: 16px;
+        font-weight: 400;
+        color: $white;
+    }
+    input {
+        background-color: transparent;
+        border: 1px solid rgba(230, 230, 230, 0.19);
+        border-radius: 3px;
+        color: $main_color;
+        padding: 10px 25px;
+        outline: none;
+        &:focus {
+            box-shadow: 0px 0px 2px 0px $main_color;
+        }
+    }
+}
+
+.data-title {
+    font-weight: 700;
+    font-size: 22px;
+    // line-height: 25px;
+    letter-spacing: 0.02em;
+    color: $main_color;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 18px;
+}
+
+// End Form
+.our-categorys .categorys-owl .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ms-img-box {
+    height: 300px;
+    a {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media($max_phone) {
+    .perfume-price-box {
+        margin: 16px 0 16px !important;
+    }
+}

@@ -1,0 +1,94 @@
+extends product-details.pug
+block pageTitle
+    title الشراء الأن
+block pageBody 
+    .path-page
+        .container 
+            block pathTitle 
+                .path-title
+                    a(href="../products.html" , calss="all-products-link") الصفحة الرئيسية
+                    span.pipe |
+                    span.perf العربة
+                    span.pipe |
+                    h2.all-products-titl الشراء الأن     
+    block pageContent
+        .order-new-pages
+            .container 
+                ul.progress-indicator
+                    block bubbleOne
+                        li.completed
+                            span.bubble
+                                svg.done-order
+                                    use(href='../assets/images/icons/icon.svg#doneOrder')
+                    block bubbleTwo
+                        li.completed
+                            span.bubble
+                                svg.extra-info
+                                    use(href='../assets/images/icons/icon.svg#extraInfo')
+                    block bubbleThree
+                        li.completed
+                            span.bubble
+                                svg.review-location
+                                    use(href='../assets/images/icons/icon.svg#reviewLocation')
+                    li.activate-bubble
+                        span.bubble
+                            svg.review-orded
+                                use(href='../assets/images/icons/icon.svg#reviewOrded')
+                .checkout-box 
+                    block checkoutContent
+                        .checkout-content 
+                            .checkout-order 
+                                .checkout-order-img-and-extra-info 
+                                    .checkout-order-img
+                                        img(src="../assets/images/l1.jpg", alt="perfume", class="checkout-perfume-img")
+                                    .checkout-order-extra-info
+                                        .extra-info-title-box
+                                            span.extra-info-title عصير جوز هند 
+                                        p.checkout-order-prcie $7.99
+                                        svg 
+                                            use(href="../assets/images/icons/icon.svg#deletFromReview")
+                                .counter
+                                    span.down(onclick='decreaseCount(event, this)') -
+                                    input(type='text' value='1')
+                                    span.up(onclick='increaseCount(event, this)') +
+                            .checkout-order 
+                                .checkout-order-img-and-extra-info 
+                                    .checkout-order-img
+                                        img(src="../assets/images/l2.jpg", alt="perfume", class="checkout-perfume-img")
+                                    .checkout-order-extra-info
+                                        .extra-info-title-box
+                                            span.extra-info-title تشيز كيك
+                                        p.checkout-order-prcie $6.99
+                                        svg 
+                                            use(href="../assets/images/icons/icon.svg#deletFromReview")
+                                .counter
+                                    span.down(onclick='decreaseCount(event, this)') -
+                                    input(type='text' value='1')
+                                    span.up(onclick='increaseCount(event, this)') +
+                            .checkout-order 
+                                .checkout-order-img-and-extra-info 
+                                    .checkout-order-img
+                                        img(src="../assets/images/smoothies5.jpg", alt="perfume", class="checkout-perfume-img")
+                                    .checkout-order-extra-info
+                                        .extra-info-title-box
+                                            span.extra-info-title عصير كوكتيل
+                                        p.checkout-order-prcie $3.99
+                                        svg 
+                                            use(href="../assets/images/icons/icon.svg#deletFromReview")
+                                .counter
+                                    span.down(onclick='decreaseCount(event, this)') -
+                                    input(type='text' value='1')
+                                    span.up(onclick='increaseCount(event, this)') +
+                    .checkout-details 
+                        p.checkout-details-title تفاصيل الطلب
+                        .checkout-products-count 
+                            p.checkout-products-count-title المنتجات
+                                span (3 منتجات)
+                            p.checkout-products-count-number $18.97
+                        .checkout-total-price 
+                            p.checkout-total-price-title السعر الكلي
+                            p.checkout-total-price-count $18.97
+                block checkoutBtn
+                    .log-page-link 
+                        a(href="../checkout2.html") 
+                            button(type="submit") التالي  

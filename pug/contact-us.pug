@@ -1,0 +1,50 @@
+extends index.pug
+block pageTitle
+    title اتصل بنا
+block pageBody 
+    .path-page
+        .container 
+            block pathTitle 
+                .path-title 
+                    h2.contact-us اتصل بنا
+    block pageContent 
+        .contact-form-container 
+            .container 
+                .contact-body.row 
+                    .col-md-6.col-lg-5.contact-info-col
+                        h1.how-help-title كيف يمكن أن نساعدك
+                        p.fill-form قم بتعبئة الفورم للتواصل معنا
+                        .contact-ways-box 
+                            .way-to-contact 
+                                p.way-title العنوان
+                                .way-info-and-icon-box 
+                                    svg.way-svg 
+                                        use(href="../assets/images/icons/icon.svg#location")
+                                    p.way-info مجمع مكة التجاري ، 9340 عبدالله فهد اللافي ، الجهراء ، الكويت
+                            .way-to-contact 
+                                p.way-title فرع الكويت
+                                .way-info-and-icon-box 
+                                    svg.way-svg.whats 
+                                        use(href="../assets/images/icons/icon.svg#whatsapp")
+                                    p.way-info 22091993 
+                            .way-to-contact 
+                                p.way-title فرع السعودية
+                                .way-info-and-icon-box 
+                                    svg.way-svg.whats  
+                                        use(href="../assets/images/icons/icon.svg#whatsapp")
+                                    p.way-info 99091993
+                            .way-to-contact 
+                                p.way-title أوقات العمل
+                                .way-info-and-icon-box 
+                                    svg.way-svg 
+                                        use(href="../assets/images/icons/icon.svg#calendar")
+                                    p.way-info السبت إلى الجمعة -مفتوح 24 ساعة
+                                
+                    .col-md-6.contact-form-box
+                        form.form-for-contact
+                            input.name-to-contact(type="text", placeholder="الاسم")
+                            input.email-to-contact(type="email", placeholder="الايميل")
+                            input.message-title(type="text", placeholder="عنوان الرسالة")
+                            textarea.textarea-to-contact(name="", cols="51", rows="6") 
+                            .send-message
+                                button(type="submit") إرسال

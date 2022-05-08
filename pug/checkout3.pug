@@ -1,0 +1,31 @@
+extends checkout2.pug
+block bubbleTwo
+    li.completed.activate-bubble
+        span.bubble
+            svg.extra-info
+                use(href='../assets/images/icons/icon.svg#extraInfo')
+block checkoutContent
+
+    .checkout-content
+        .checkout3
+            .add-commints-box 
+                .form-subject
+                    label(for="addCommint", class="label-class") تعليقات اضافية *
+                    textarea#addCommint(name="", cols="30", rows="10") 
+            .add-file-content 
+                .form-subject
+                    label(for="addFile", class="label-class") ملفات اضافية *
+                    label.add-file-box
+                        |ارفاق الملفات
+                        input#addFile(type="file")
+                        svg 
+                            use(href="../assets/images/icons/icon.svg#addFileSvg")
+                    span.file-size  الملف يجب ألا يتعدى (JPEG,PNG,PDF) 10MB
+block checkoutBtn
+    .checkout-btn-box
+        .log-page-link.prev-btn-checkout
+            a(href="../checkout2.html") 
+                button(type="submit") السابق  
+        .log-page-link
+            a(href="../checkout4.html") 
+                button(type="submit") التالي  

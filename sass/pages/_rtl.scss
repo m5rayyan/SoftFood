@@ -1,0 +1,150 @@
+.login-btn {
+    margin-right: 0 !important;
+    margin-left: 3rem;
+}
+
+svg {
+    margin-right: 1rem !important;
+    margin-left: 0 !important;
+}
+
+.nav-bar {
+    nav {
+        .nav-item {
+            @media (min-width: 992px) {
+                margin-left: 2rem !important;
+                margin-right: 0.5rem !important;
+            }
+            a {
+                @media (min-width: 992px) {
+                    padding-right: 0 !important;
+                }
+            }
+        }
+    }
+}
+
+.add-to-cart {
+    .cart {
+        margin: 0 !important;
+        margin-left: 5px !important;
+    }
+}
+
+.footer-social-media {
+    .social-link {
+        &:not(:last-of-type) {
+            margin-right: 0 !important;
+            margin-left: 19px;
+        }
+    }
+}
+
+.collection-slide {
+    .container {
+        flex-direction: row !important;
+        text-align: right !important;
+        align-items: flex-start !important;
+    }
+}
+
+.form-inputs-box {
+    .remember-me-or-forget-password {
+        .form-check-input {
+            margin-right: 0 !important;
+            margin-left: 8px;
+        }
+    }
+}
+
+.remember-me-or-forget-password {
+    flex-direction: row !important;
+}
+
+.log-question {
+    span {
+        display: block;
+    }
+}
+
+.checkout-order-img {
+    margin-right: 0 !important;
+    margin-left: 27px;
+}
+
+.file-uploaded-img-box {
+    margin-right: 0 !important;
+    margin-left: 10px;
+}
+
+.profile-link-content {
+    svg {
+        margin-left: 8px !important;
+    }
+}
+
+.data-type-box {
+    svg {
+        margin: 0 !important;
+        margin-left: 16px !important;
+    }
+}
+
+.search-filter-content {
+    .profile-input-search {
+        padding-right: calc(1rem + 23px) !important;
+        padding-left: 13px !important;
+    }
+    .search-svg {
+        width: 20px;
+        height: 17px;
+        position: absolute;
+        right: 0 !important;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.accordion-button {
+    &::after {
+        margin-right: auto !important;
+        margin-left: 0 !important;
+        background-image: url(../images/about1.webp);
+    }
+}
+
+.nav-cart-box {
+    .cart-body {
+        left: 0 !important;
+        right: unset !important;
+    }
+}
+
+.sel-box {
+    &:hover {
+        box-shadow: -2px 0px 4px -1px #d2973d;
+        .num-bg {
+            visibility: visible !important;
+            left: 50%;
+            right: auto !important;
+        }
+    }
+}
+
+.perfume-price-box {
+    flex-direction: row-reverse !important;
+}
+
+.categories-search-body {
+    .categories-search-box {
+        @media(max-width: 991px) {
+            right: initial !important;
+            left: 0;
+        }
+    }
+}
+
+.categ-arrow {
+    margin-left: 2px !important;
+    margin-right: 10px !important;
+}

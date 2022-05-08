@@ -1,0 +1,49 @@
+extends profile-my-info.pug
+block pageTitle
+    title طلباتي
+block profileLinkContent
+    .profile-orders-page
+        .data-title طلباتي
+        .search-filter-box
+            .search-filter-content  
+                input#searchSvg(type="search",class="profile-input-search")
+                svg(class="search-svg") 
+                    use(href="../assets/images/icons/icon.svg#searchSvg")
+            svg(class="search-fillter")
+                use(href="../assets/images/icons/icon.svg#searchFillter")
+            
+        .order-orders 
+            .order-orders-titles 
+                .oo-title رقم الطلب
+                .oo-title تاريخ الطلب
+                .oo-title حالة الطلب	
+            .order-orders-row
+                .oo-number #55
+                .oo-time-and-data 
+                    .oo-time 3:00 PM	
+                    .oo-data 2/26/2022 
+                .oo-status قيد الانتظار
+            .order-orders-row
+                .oo-number #56
+                .oo-time-and-data 
+                    .oo-time 3:00 PM
+                    .oo-data 2/26/2022 
+                .oo-status مكتمل 
+            .order-orders-row
+                .oo-number #57
+                .oo-time-and-data 
+                    .oo-time 3:00 PM
+                    .oo-data 2/26/2022 
+                .oo-status  قيد المعالجة
+            .order-orders-row
+                .oo-number #58
+                .oo-time-and-data 
+                    .oo-time 3:00 PM
+                    .oo-data 2/26/2022 
+                .oo-status جاري التوصيل 
+            .order-orders-row
+                .oo-number #59
+                .oo-time-and-data 
+                    .oo-time 3:00 PM
+                    .oo-data 2/26/2022 
+                .oo-status ملغي 

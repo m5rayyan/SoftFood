@@ -1,0 +1,48 @@
+extends checkout3.pug
+block pageTitle
+    title الشراء الأن
+block bubbleOne
+    li.completed.activate-bubble
+        span.bubble
+            svg.done-order
+                use(href='../assets/images/icons/icon.svg#doneOrder')
+block checkoutContent
+
+    .checkout-content
+        .checkout4
+            .bank-transfers 
+                p.bank-transfers-title بيانات الحوالة البنكية
+                .bank-transfers-info-box 
+                    .bank-transfers-info
+                        .bank-transfers-info-content 
+                            p.iban-num-title.bank-transfers-info-title رقم الآيبان
+                            p.iban-num.bank-transfers-info-text AL47 2121 1009 0000 0002 3569 87411
+                        .bank-transfers-info-content 
+                            p.swift-code-title.bank-transfers-info-title Swıft Code
+                            p.swift-code.bank-transfers-info-text AAAA 
+                    .bank-transfers-info
+                        .bank-transfers-info-content 
+                            p.country-name-title.bank-transfers-info-title البلد
+                            p.country-name.bank-transfers-info-text فلسطين
+                        .bank-transfers-info-content 
+                            p.bank-name-title.bank-transfers-info-title اسم البنك
+                            p.bank-name.bank-transfers-info-text البنك الاسلامي
+        block test
+            .add-file-content 
+                .form-subject
+                    label(for="addFile", class="label-class") السند النكي *
+                    label.add-file-box
+                        |ارفق السند البنكي
+                        input#addFile(type="file")
+                        svg 
+                            use(href="../assets/images/icons/icon.svg#addFileSvg")
+                    span.file-size  الملف يجب ألا يتعدى (JPEG,PNG,PDF) 10MB
+block checkoutBtn
+    .checkout-btn-box
+        .log-page-link.prev-btn-checkout
+            a(href="../checkout3.html") 
+                button(type="submit") السابق  
+        .log-page-link
+            a(href="../checkout4b.html") 
+                button(type="submit") تأكيد  
+            

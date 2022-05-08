@@ -1,0 +1,44 @@
+extends checkout1
+block pageTitle
+    title الشراء الأن
+block bubbleThree
+    li.completed.activate-bubble
+        span.bubble
+            svg.review-location
+                use(href='../assets/images/icons/icon.svg#reviewLocation')
+block checkoutContent
+    .checkout-content.checkout2
+        form(class="data-form")
+            .name-checkout 
+                .form-subject
+                    label(for="nameCheckout", class="label-class") الاسم *
+                    input#nameCheckout(type="text",placeholder="محمد محمد" ) 
+            .phone-and-email-checkout
+                .form-subject
+                    label(for="phoneNumCheckout", class="label-class") رقم الهاتف *
+                    input#phoneNumCheckout(type="tel",placeholder="057688933" ) 
+                .form-subject
+                    label(for="emailDataCheckout", class="label-class") الايميل *
+                    input#emailDataCheckout(type="email",placeholder="ee@gmail.com" ) 
+            .street-checkout
+                .form-subject
+                    label(for="streetNameCheckout", class="label-class") اسم الشارع *
+                    input#streetNameCheckout(type="tel",placeholder="057688933" ) 
+            .select-city
+                label(for="selectCityCheckout") المدينة *
+                select#selectCityCheckout
+                    option(value="0") غزة
+                    option(value="1") القدس
+            .select-country
+                label(for="selectCountryCheckout") الدولة *
+                select#selectCountryCheckout
+                    option(value="0") فلسطين
+                    option(value="1") مصر
+block checkoutBtn
+    .checkout-btn-box
+        .log-page-link.prev-btn-checkout
+            a(href="../checkout1.html") 
+                button(type="submit") السابق  
+        .log-page-link
+            a(href="../checkout3.html") 
+                button(type="submit") التالي  

@@ -1,0 +1,99 @@
+extends index.pug
+
+block nav-log-or-profile
+    a.login-btn(href="../profile-my-info.html") حسابي
+block pageTitle
+    title حسابي
+block pageBody 
+    .path-page
+        .container 
+            block pathTitle 
+                .path-title.products-title
+                    h2.all-products-titl حسابي
+                    
+    block pageContent
+        .profile-info-box
+            .container
+                .profile-info-content
+                    .profile-links-box 
+                        a(href="../profile-my-info.html",class="profile-link")
+                            .profile-link-content 
+                                svg(class="profile-svg") 
+                                    use(href="../assets/images/icons/icon.svg#profileIcon")
+                                | بياناتي
+                            .prof-line
+                        a(href="../profile-orders.html",class="profile-link")
+                            .profile-link-content 
+                                svg(class="my-orders-svg") 
+                                    use(href="../assets/images/icons/icon.svg#myOrdersSvg")
+                                | طلباتي
+                            .prof-line
+
+                        a(href="../profile-change-password.html",class="profile-link")
+                            .profile-link-content 
+                                svg(class="change-password-svg") 
+                                    use(href="../assets/images/icons/icon.svg#changePasswordSvg")
+                                | تغيير كلمة المرور
+                            .prof-line
+
+                        a(href="../sing-in.html",class="profile-link")
+                            .profile-link-content 
+                                svg(class="log-out-svg") 
+                                    use(href="../assets/images/icons/icon.svg#logOutSvg")
+                                | تسجيل الخروج
+
+                    block profileLinkContent
+                        .profile-data-box 
+                            .profile-data-content 
+                                .data-title بياناتي
+                                .data-content 
+                                    .data-type-box
+                                        .data-svg-and-type.col-6.col-md-4 
+                                            svg(class="earth-svg") 
+                                                use(href="../assets/images/icons/icon.svg#earth")
+                                            p.data-type بياناتي
+                                        .data-type-info-box.col-md-8 
+                                            p.data-type-info-text فلسطين
+                                    .data-type-box
+                                        .data-svg-and-type.col-6.col-md-4 
+                                            svg(class="phone-data-svg") 
+                                                use(href="../assets/images/icons/icon.svg#phoneData")
+                                            p.data-type رقم الهاتف
+                                        .data-type-info-box.col-md-8 
+                                            p.data-type-info-text 057688933
+                                    .data-type-box
+                                        .data-svg-and-type.col-6.col-md-4 
+                                            svg(class="sms-data-svg") 
+                                                use(href="../assets/images/icons/icon.svg#smsData")
+                                            p.data-type  البريد الإلكتروني
+                                        .data-type-info-box.col-md-8 
+                                            p.data-type-info-text ee@gmail.com
+                                    .data-type-box
+                                        .data-svg-and-type.col-6.col-md-4 
+                                            svg(class="my-orders-dara-svg") 
+                                                use(href="../assets/images/icons/icon.svg#myOrdersDara")
+                                            p.data-type طلباتي
+                                        .data-type-info-box.col-md-8 
+                                            p.data-type-info-text 3 طلبات
+                            .profile-data-edit 
+                                .data-title تعديل البيانات
+                                form(class="data-form")
+                                    .name-and-contry 
+                                        .form-subject
+                                            label(for="name", class="label-class") الاسم *
+                                            input#name(type="text",placeholder="محمد محمد" ) 
+                                        .select-cotry
+                                            label(for="selectData") الدولة *
+                                            select#selectData
+                                                option(value="0") فلسطين
+                                                option(value="1") مصر
+                                    .phone-and-email
+                                        .form-subject
+                                            label(for="phoneNum", class="label-class") رقم الهاتف *
+                                            input#phoneNum(type="tel",placeholder="057688933" ) 
+                                        .form-subject
+                                            label(for="emailData", class="label-class") الايميل *
+                                            input#emailData(type="email",placeholder="ee@gmail.com" ) 
+                                .log-page-link 
+                                    button(type="submit") تحديث  
+

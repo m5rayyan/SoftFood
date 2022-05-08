@@ -1,0 +1,24 @@
+extends product-details.pug
+block pageTitle
+    title الشراء الأن
+block pageBody 
+    .path-page
+        .container 
+            block pathTitle 
+                .path-title
+                    a(href="../products.html" , calss="all-products-link") الصفحة الرئيسية
+                    span.pipe |
+                    span.perf العربة
+                    span.pipe |
+                    h2.all-products-titl الشراء الأن     
+    block pageContent
+        .done-order-page 
+            .container 
+                .done-order-box 
+                    .done-order-img-box
+                        img(src="../assets/images/doneO.png", alt="")
+                    p.done-order-title طلبك مكتمل!
+                    p.done-order-text شكراً لطلبك! تتم معالجة طلبك و سيتم إكماله في غضون 30-60 دقيقة، ستتلقى تأكيداً عبر الجوال عند اكتمال الطلب
+                    .log-page-link.done-btn-page
+                        a(href="../products.html") 
+                            button(type="submit") مواصلة التسوق  

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" dir="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/normalize.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <title>Al-Fayiz Perfume </title>
+  </head>
+  <body>
+    <div class="nav-bar">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid"><a class="navbar-brand" href="#"><img class="logo-dims" src="../assets/images/Logo.png" alt="Logo"></a>
+            <button class="navbar-toggler toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item active"><a class="nav-link" aria-current="page" href="../../../index.html">الصفحة الرئيسية</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../../products.html">جميع المنتجات</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../../About-us.html">من نحن</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../../contact-us.html">اتصل بنا</a></li>
+              </ul>
+              <form class="d-flex"><a class="login-btn" href="../../../singup.html">تسجيل الدخول</a>
+                <div class="nav-svg"> <img class="flag" src="../assets/images/flag.webp" alt="flag">
+                  <svg class="search">
+                    <use href="../assets/images/icons/icon.svg#search"></use>
+                  </svg>
+                  <div class="nav-cart-box">
+                    <div class="cart-icon-box" onclick="showCart()">
+                      <p>3</p>
+                      <svg class="nav-cart"> 
+                        <use href="../assets/images/icons/icon.svg#nav-cart"></use>
+                      </svg>
+                    </div>
+                    <div class="cart-body"> 
+                      <h3 class="cart-title">عربتي</h3>
+                      <div class="cart-line"> </div>
+                      <div class="all-products-in-cart">
+                        <div class="products-in-cart-box row"> 
+                          <div class="col-5">
+                            <div class="in-cart-img"> <img class="img-dims" src="../../../assets/images/burger.jpg" alt="perfume"></div>
+                          </div>
+                          <div class="col-7 in-cart-info-box"> 
+                            <div class="in-cart-info">
+                              <div class="in-cart-name-and-price"><span class="product-name-in-cart">برجر</span><span class="product-price-in-cart">$13.99</span></div>
+                              <svg class="delete-from-cart"> 
+                                <use href="../assets/images/icons/icon.svg#delete"></use>
+                              </svg>
+                            </div>
+                            <div class="counter"><span class="down" onclick="decreaseCount(event, this)">-</span>
+                              <input type="text" value="1"><span class="up" onclick="increaseCount(event, this)">+</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="products-in-cart-box row"> 
+                          <div class="col-5">
+                            <div class="in-cart-img"> <img class="img-dims" src="../../../assets/images/pizza.jpg" alt="perfume"></div>
+                          </div>
+                          <div class="col-7 in-cart-info-box"> 
+                            <div class="in-cart-info">
+                              <div class="in-cart-name-and-price"><span class="product-name-in-cart">بيتزا مارجريتا</span><span class="product-price-in-cart">$8.99</span></div>
+                              <svg class="delete-from-cart"> 
+                                <use href="../assets/images/icons/icon.svg#delete"></use>
+                              </svg>
+                            </div>
+                            <div class="counter"><span class="down" onclick="decreaseCount(event, this)">-</span>
+                              <input type="text" value="1"><span class="up" onclick="increaseCount(event, this)">+</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="products-in-cart-box row"> 
+                          <div class="col-5">
+                            <div class="in-cart-img"> <img class="img-dims" src="../../../assets/images/smoothies1.jpg" alt="perfume"></div>
+                          </div>
+                          <div class="col-7 in-cart-info-box"> 
+                            <div class="in-cart-info">
+                              <div class="in-cart-name-and-price"><span class="product-name-in-cart">عصير التوت</span><span class="product-price-in-cart">$3.99</span></div>
+                              <svg class="delete-from-cart"> 
+                                <use href="../assets/images/icons/icon.svg#delete"></use>
+                              </svg>
+                            </div>
+                            <div class="counter"><span class="down" onclick="decreaseCount(event, this)">-</span>
+                              <input type="text" value="1"><span class="up" onclick="increaseCount(event, this)">+</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cart-line"> </div>
+                      <div class="sub-price-and-delivery-box"> <span class="sub-price-and-delivery-title">المجموع الفرعي</span><span class="sub-price-and-delivery-price">$26.97</span></div>
+                      <div class="sub-price-and-delivery-box"> <span class="sub-price-and-delivery-title">تكلفة التوصيل</span><span class="sub-price-and-delivery-price">$5.00</span></div>
+                      <div class="cart-line"> </div>
+                      <div class="total-price-box"> <span class="total-price-title">السعر الكلي</span><span class="total-price">$31.97</span></div>
+                      <div class="order-now"><a href="#">الشراء الأن </a></div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="collection-slide">
+      <div class="owl-carousel main-owl main-sec">
+        <div class="item first-slide">
+          <div class="container">
+            <div class="main-slide-col col-lg-4">
+              <h1 class="home-title">مجموعة الفايز للعطور</h1>
+              <div class="line-home"></div>
+              <p class="slide-text">مزيج من الأزهار كزهرة البرتقال والباتشولي والعنبر والسوسن والورد. بالإضافة إلى الفلفل الوردي والتوابل ونجيل الهند لتعطي أريج قوي وفواح</p>
+              <div class="btn-discover"><a href="../products.html">القسم الملكي</a></div>
+            </div>
+            <div class="main-slide-col col-lg-8"></div>
+          </div>
+        </div>
+        <div class="item second-slide">
+          <div class="container">
+            <div class="main-slide-col col-lg-4">
+              <h1 class="home-title">مجموعة الفايز للعطور</h1>
+              <div class="line-home"></div>
+              <p class="slide-text">مزيج من الأزهار كزهرة البرتقال والباتشولي والعنبر والسوسن والورد. بالإضافة إلى الفلفل الوردي والتوابل ونجيل الهند لتعطي أريج قوي وفواح</p>
+              <div class="btn-discover"><a href="../products.html">القسم الملكي</a></div>
+            </div>
+            <div class="main-slide-col col-lg-8"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sellect-box-section">
+      <div class="container">
+        <div class="sellect-box row">
+          <div class="sel-box col-md-4"><a class="sel-link" href="../products.html"> 
+              <div class="sel-box-in">
+                <div class="num-box"> <img class="num-bg" src="../assets/images/num-light.png" alt="num-bg">
+                  <sapn>01</sapn>
+                </div>
+                <p class="title-box">أفضل العطور</p>
+              </div></a></div>
+          <div class="sel-box col-md-4"><a class="sel-link" href="../products.html">  
+              <div class="sel-box-in">
+                <div class="num-box"> <img class="num-bg" src="../assets/images/num-light.png" alt="num-bg">
+                  <sapn>02</sapn>
+                </div>
+                <p class="title-box">أفضل الأسعار</p>
+              </div></a></div>
+          <div class="sel-box col-md-4"><a class="sel-link" href="../contact-us.html">  
+              <div class="sel-box-in">
+                <div class="num-box"> <img class="num-bg" src="../assets/images/num-light.png" alt="num-bg">
+                  <sapn>03</sapn>
+                </div>
+                <p class="title-box">دعم على مدار الساعة</p>
+              </div></a></div>
+        </div>
+      </div>
+    </div>
+    <div class="most-order-section" id="mostOrdered">
+      <div class="container"> 
+            <div class="section-box-title"><img class="section-title-bg" src="../../assets/images/sectionTitlebg.png" alt="section-title-bg">
+              <div class="section-title"><span class="section-main-title">الأكثر طلباً</span></div>
+              <p class="section-explane-title">المنتجات الأكثر طلباً لدى الفايز للعطور، تميز معنا</p>
+            </div>
+        <div class="most-ordered-boxes row">
+          <div class="col-6 col-md-3">
+            <div class="most-order-item"> 
+              <div class="most-order-img-box">
+                <div class="ms-img-box"> <a href="../product-details.html"> <img class="img-dims" src="../assets/images/perfume1.webp" alt="Most perfume ordered"></a></div>
+              </div>
+              <div class="most-content">
+                <div class="perfume-name-and-size">
+                  <div class="perfume-name">عطر A&H</div>
+                  <div class="perfume-size">(100مل)</div>
+                </div>
+                <div class="perfume-price-box">
+                  <div class="perfume-old-price">$241.15</div>
+                  <div class="perfume-price">$150.55</div>
+                </div>
+                <button class="add-to-cart" onclick="sweetalertclick() ">
+                  <svg class="cart"> 
+                    <use href="../assets/images/icons/icon.svg#cart"></use>
+                  </svg>
+                  <p class="add-to-cart-title">أضف للعربة</p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="most-order-item"> 
+              <div class="most-order-img-box">
+                <div class="ms-img-box"> <a href="../product-details.html"> <img class="img-dims" src="../assets/images/perfume1.webp" alt="Most perfume ordered"></a></div>
+              </div>
+              <div class="most-content">
+                <div class="perfume-name-and-size">
+                  <div class="perfume-name">عطر روز مسك</div>
+                  <div class="perfume-size">(30مل)</div>
+                </div>
+                <div class="perfume-price-box">
+                  <div class="perfume-old-price">$241.15</div>
+                  <div class="perfume-price">$150.55</div>
+                </div>
+                <button class="add-to-cart">
+                  <svg class="cart"> 
+                    <use href="../assets/images/icons/icon.svg#cart"></use>
+                  </svg>
+                  <p class="add-to-cart-title">أضف للعربة</p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="most-order-item"> 
+              <div class="most-order-img-box">
+                <div class="ms-img-box"> <a href="../product-details.html"> <img class="img-dims" src="../assets/images/perfume1.webp" alt="Most perfume ordered"></a></div>
+              </div>
+              <div class="most-content">
+                <div class="perfume-name-and-size">
+                  <div class="perfume-name">عطر عدن</div>
+                  <div class="perfume-size">(60مل)</div>
+                </div>
+                <div class="perfume-price-box">
+                  <div class="perfume-old-price">$241.15</div>
+                  <div class="perfume-price">$150.55</div>
+                </div>
+                <button class="add-to-cart">
+                  <svg class="cart"> 
+                    <use href="../assets/images/icons/icon.svg#cart"></use>
+                  </svg>
+                  <p class="add-to-cart-title">أضف للعربة</p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="most-order-item"> 
+              <div class="most-order-img-box">
+                <div class="ms-img-box"> <a href="../product-details.html"> <img class="img-dims" src="../assets/images/perfume1.webp" alt="Most perfume ordered"></a></div>
+              </div>
+              <div class="most-content">
+                <div class="perfume-name-and-size">
+                  <div class="perfume-name">عطر الذهب الأسود</div>
+                  <div class="perfume-size">(30مل)</div>
+                </div>
+                <div class="perfume-price-box">
+                  <div class="perfume-old-price">$241.15</div>
+                  <div class="perfume-price">$150.55</div>
+                </div>
+                <button class="add-to-cart"> 
+                  <svg class="cart"> 
+                    <use href="../assets/images/icons/icon.svg#cart"></use>
+                  </svg>
+                  <p class="add-to-cart-title">أضف للعربة</p>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="our-categorys"> 
+      <div class="container"> 
+            <div class="section-box-title"><img class="section-title-bg" src="../../assets/images/sectionTitlebg.png" alt="section-title-bg">
+              <div class="section-title"><span class="section-main-title">التصنيفات</span></div>
+              <p class="section-explane-title">المنتجات الأكثر طلباً لدى الفايز للعطور، تميز معنا</p>
+            </div>
+        <div class="owl-carousel owl-theme categorys-owl">
+          <div class="item"><a class="category-page-link" href="../category.html"> <img class="categore-img" src="../assets/images/categories1.webp" alt="Categore">
+              <p class="category-name">العطور </p></a></div>
+          <div class="item"><a class="category-page-link" href="../category.html"> <img class="categore-img" src="../assets/images/categories2.webp" alt="Categore">
+              <p class="category-name">عطور الشعر</p></a></div>
+          <div class="item"><a class="category-page-link" href="../category.html"> <img class="categore-img" src="../assets/images/categories3.webp" alt="Categore">
+              <p class="category-name">دهن العود  </p></a></div>
+          <div class="item"><a class="category-page-link" href="../category.html"> <img class="categore-img" src="../assets/images/categories4.webp" alt="Categore">
+              <p class="category-name">العناية بالجسم  </p></a></div>
+          <div class="item"><a class="category-page-link" href="../category.html"> <img class="categore-img" src="../assets/images/categories2.webp" alt="Categore">
+              <p class="category-name">عطور الشعر</p></a></div>
+          <div class="item"><a class="category-page-link" href="../category.html"> <img class="categore-img" src="../assets/images/categories1.webp" alt="Categore">
+              <p class="category-name">العطور</p></a></div>
+        </div>
+      </div>
+    </div>
+    <div class="collection-slide mid-slide">
+      <div class="container">
+        <div class="slide-row2 row">
+          <div class="slide-col col-lg-8 col-xl-6"> 
+            <div class="sub-bg-box">
+              <h2 class="bg-title">عطر ورد عود</h2>
+              <p class="discount">(خصم 50%) </p>
+            </div>
+            <p class="slide-text">
+               خليط من المكونات التي تعكس طيب الملكة،مزيج متناسق من الريحان والشيح والسوسن والمسك. بالإضافة إلى البرغموت واليلانغ والباتشولي.</p>
+            <div class="btn-discover"><a href="../products.html">القسم الملكي</a></div>
+          </div>
+          <div class="slide-col2 col-lg-4 col-xl-6"></div>
+        </div>
+      </div>
+    </div>
+    <div class="most-order-section recently-added">
+      <div class="container"> 
+            <div class="section-box-title"><img class="section-title-bg" src="../../assets/images/sectionTitlebg.png" alt="section-title-bg">
+              <div class="section-title"><span class="section-main-title">المضاف مؤخراً</span></div>
+              <p class="section-explane-title">المنتجات الأكثر طلباً لدى الفايز للعطور، تميز معنا</p>
+            </div>
+        <div class="most-ordered-boxes row">
+          <div class="col-6 col-md-3">
+            <div class="most-order-item"> 
+              <div class="most-order-img-box">
+                <div class="ms-img-box"> <a href="../product-details.html"> <img class="img-dims" src="../assets/images/perfume1.webp" alt="Most perfume ordered"></a></div>
+              </div>
+              <div class="most-content">
+                <div class="perfume-name-and-size">
+                  <div class="perfume-name">عطر A&H</div>
+                  <div class="perfume-size">(100مل)</div>
+                </div>
+                <div class="perfume-price-box">
+                  <div class="perfume-price">$150.55</div>
+                </div>
+                <button class="add-to-cart">
+                  <svg class="cart"> 
+                    <use href="../assets/images/icons/icon.svg#cart"></use>
+                  </svg>
+                  <p class="add-to-cart-title">أضف للعربة</p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="most-order-item"> 
+              <div class="most-order-img-box">
+                <div class="ms-img-box"> <a href="../product-details.html"> <img class="img-dims" src="../assets/images/perfume1.webp" alt="Most perfume ordered"></a></div>
+              </div>
+              <div class="most-content">
+                <div class="perfume-name-and-size">
+                  <div class="perfume-name">عطر روز مسك</div>
+                  <div class="perfume-size">(30مل)</div>
+                </div>
+                <div class="perfume-price-box">
+                  <div class="perfume-price">$150.55</div>
+                </div>
+                <button class="add-to-cart">
+                  <svg class="cart"> 
+                    <use href="../assets/images/icons/icon.svg#cart"></use>
+                  </svg>
+                  <p class="add-to-cart-title">أضف للعربة</p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="most-order-item"> 
+              <div class="most-order-img-box">
+                <div class="ms-img-box"> <a href="../product-details.html"> <img class="img-dims" src="../assets/images/perfume1.webp" alt="Most perfume ordered"></a></div>
+              </div>
+              <div class="most-content">
+                <div class="perfume-name-and-size">
+                  <div class="perfume-name">عطر عدن</div>
+                  <div class="perfume-size">(60مل)</div>
+                </div>
+                <div class="perfume-price-box">
+                  <div class="perfume-price">$150.55</div>
+                </div>
+                <button class="add-to-cart">
+                  <svg class="cart"> 
+                    <use href="../assets/images/icons/icon.svg#cart"></use>
+                  </svg>
+                  <p class="add-to-cart-title">أضف للعربة</p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="most-order-item"> 
+              <div class="most-order-img-box">
+                <div class="ms-img-box"> <a href="../product-details.html"> <img class="img-dims" src="../assets/images/perfume1.webp" alt="Most perfume ordered"></a></div>
+              </div>
+              <div class="most-content">
+                <div class="perfume-name-and-size">
+                  <div class="perfume-name">عطر الذهب الأسود</div>
+                  <div class="perfume-size">(30مل)</div>
+                </div>
+                <div class="perfume-price-box">
+                  <div class="perfume-price">$150.55</div>
+                </div>
+                <button class="add-to-cart"> 
+                  <svg class="cart"> 
+                    <use href="../assets/images/icons/icon.svg#cart"></use>
+                  </svg>
+                  <p class="add-to-cart-title">أضف للعربة</p>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer> 
+      <div class="container">
+        <div class="footer-content row">
+          <div class="footer-logo"> <img src="../../assets/images/Logo.png" alt="Logo"></div>
+          <div class="footer-links row">
+            <div class="ft-link"> <a href="../../index.html"> الصفحة الرئيسية</a></div>
+            <div class="ft-link"> <a href="../../products.html"> جميع المنتجات</a></div>
+            <div class="ft-link"> <a href="../../About-us.html"> من نحن</a></div>
+            <div class="ft-link"> <a href="../../contact-us.html"> اتصل بنا</a></div>
+          </div>
+          <div class="footer-social-media row">
+            <div class="social-link"> <a href="http://twitter.com"> <img src="../../assets/images/twitter.webp" alt="twitter"></a></div>
+            <div class="social-link"><a href="http://instagram.com"> <img src="../../assets/images/instagram.webp" alt="instagram"></a></div>
+            <div class="social-link"><a href="https://web.telegram.org/k/"> <img src="../../assets/images/telegram.webp" alt="telegram"></a></div>
+            <div class="social-link"><a href="https://web.whatsapp.com/"> <img src="../../assets/images/whatsapp.webp" alt="whatsapp"></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="copy-right">
+         © Soft Food 2021 All Rights Reserved.</div>
+    </footer>
+    <script src="../../assets/js/jquery-3.6.0.min.js"> </script>
+    <script src="../../assets/js/bootstrap.min.js"> </script>
+    <script src="../../assets/js/owl.carousel.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"> </script>
+    <script src="../../assets/js/script.js"> </script>
+  </body>
+</html>

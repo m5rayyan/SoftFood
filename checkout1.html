@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/normalize.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <title>الشراء الأن</title>
+  </head>
+  <body>
+    <div class="nav-bar">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid"><a class="navbar-brand" href="#"><img class="logo-dims" src="../assets/images/Logo.png" alt="Logo"></a>
+            <button class="navbar-toggler toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item active"><a class="nav-link" aria-current="page" href="../../../index.html">الصفحة الرئيسية</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../../products.html">جميع المنتجات</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../../About-us.html">من نحن</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../../contact-us.html">اتصل بنا</a></li>
+              </ul>
+              <form class="d-flex"><a class="login-btn" href="../../../singup.html">تسجيل الدخول</a>
+                <div class="nav-svg"> <img class="flag" src="../assets/images/flag.webp" alt="flag">
+                  <svg class="search">
+                    <use href="../assets/images/icons/icon.svg#search"></use>
+                  </svg>
+                  <div class="nav-cart-box">
+                    <div class="cart-icon-box" onclick="showCart()">
+                      <p>3</p>
+                      <svg class="nav-cart"> 
+                        <use href="../assets/images/icons/icon.svg#nav-cart"></use>
+                      </svg>
+                    </div>
+                    <div class="cart-body"> 
+                      <h3 class="cart-title">عربتي</h3>
+                      <div class="cart-line"> </div>
+                      <div class="all-products-in-cart">
+                        <div class="products-in-cart-box row"> 
+                          <div class="col-5">
+                            <div class="in-cart-img"> <img class="img-dims" src="../../../assets/images/burger.jpg" alt="perfume"></div>
+                          </div>
+                          <div class="col-7 in-cart-info-box"> 
+                            <div class="in-cart-info">
+                              <div class="in-cart-name-and-price"><span class="product-name-in-cart">برجر</span><span class="product-price-in-cart">$13.99</span></div>
+                              <svg class="delete-from-cart"> 
+                                <use href="../assets/images/icons/icon.svg#delete"></use>
+                              </svg>
+                            </div>
+                            <div class="counter"><span class="down" onclick="decreaseCount(event, this)">-</span>
+                              <input type="text" value="1"><span class="up" onclick="increaseCount(event, this)">+</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="products-in-cart-box row"> 
+                          <div class="col-5">
+                            <div class="in-cart-img"> <img class="img-dims" src="../../../assets/images/pizza.jpg" alt="perfume"></div>
+                          </div>
+                          <div class="col-7 in-cart-info-box"> 
+                            <div class="in-cart-info">
+                              <div class="in-cart-name-and-price"><span class="product-name-in-cart">بيتزا مارجريتا</span><span class="product-price-in-cart">$8.99</span></div>
+                              <svg class="delete-from-cart"> 
+                                <use href="../assets/images/icons/icon.svg#delete"></use>
+                              </svg>
+                            </div>
+                            <div class="counter"><span class="down" onclick="decreaseCount(event, this)">-</span>
+                              <input type="text" value="1"><span class="up" onclick="increaseCount(event, this)">+</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="products-in-cart-box row"> 
+                          <div class="col-5">
+                            <div class="in-cart-img"> <img class="img-dims" src="../../../assets/images/smoothies1.jpg" alt="perfume"></div>
+                          </div>
+                          <div class="col-7 in-cart-info-box"> 
+                            <div class="in-cart-info">
+                              <div class="in-cart-name-and-price"><span class="product-name-in-cart">عصير التوت</span><span class="product-price-in-cart">$3.99</span></div>
+                              <svg class="delete-from-cart"> 
+                                <use href="../assets/images/icons/icon.svg#delete"></use>
+                              </svg>
+                            </div>
+                            <div class="counter"><span class="down" onclick="decreaseCount(event, this)">-</span>
+                              <input type="text" value="1"><span class="up" onclick="increaseCount(event, this)">+</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cart-line"> </div>
+                      <div class="sub-price-and-delivery-box"> <span class="sub-price-and-delivery-title">المجموع الفرعي</span><span class="sub-price-and-delivery-price">$26.97</span></div>
+                      <div class="sub-price-and-delivery-box"> <span class="sub-price-and-delivery-title">تكلفة التوصيل</span><span class="sub-price-and-delivery-price">$5.00</span></div>
+                      <div class="cart-line"> </div>
+                      <div class="total-price-box"> <span class="total-price-title">السعر الكلي</span><span class="total-price">$31.97</span></div>
+                      <div class="order-now"><a href="#">الشراء الأن </a></div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="path-page">
+      <div class="container"> 
+        <div class="path-title"><a href="../products.html" calss="all-products-link">الصفحة الرئيسية</a><span class="pipe">|</span><span class="perf">العربة</span><span class="pipe">|</span>
+          <h2 class="all-products-titl">الشراء الأن     </h2>
+        </div>
+      </div>
+    </div>
+    <div class="order-new-pages">
+      <div class="container"> 
+        <ul class="progress-indicator">
+          <li class="completed"><span class="bubble">
+              <svg class="done-order">
+                <use href="../assets/images/icons/icon.svg#doneOrder"></use>
+              </svg></span></li>
+          <li class="completed"><span class="bubble">
+              <svg class="extra-info">
+                <use href="../assets/images/icons/icon.svg#extraInfo"></use>
+              </svg></span></li>
+          <li class="completed"><span class="bubble">
+              <svg class="review-location">
+                <use href="../assets/images/icons/icon.svg#reviewLocation"></use>
+              </svg></span></li>
+          <li class="activate-bubble"><span class="bubble">
+              <svg class="review-orded">
+                <use href="../assets/images/icons/icon.svg#reviewOrded"></use>
+              </svg></span></li>
+        </ul>
+        <div class="checkout-box"> 
+          <div class="checkout-content"> 
+            <div class="checkout-order"> 
+              <div class="checkout-order-img-and-extra-info"> 
+                <div class="checkout-order-img"><img class="checkout-perfume-img" src="../assets/images/l1.jpg" alt="perfume"></div>
+                <div class="checkout-order-extra-info">
+                  <div class="extra-info-title-box"><span class="extra-info-title">عصير جوز هند </span></div>
+                  <p class="checkout-order-prcie">$7.99</p>
+                  <svg> 
+                    <use href="../assets/images/icons/icon.svg#deletFromReview"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="counter"><span class="down" onclick="decreaseCount(event, this)">-</span>
+                <input type="text" value="1"><span class="up" onclick="increaseCount(event, this)">+</span>
+              </div>
+            </div>
+            <div class="checkout-order"> 
+              <div class="checkout-order-img-and-extra-info"> 
+                <div class="checkout-order-img"><img class="checkout-perfume-img" src="../assets/images/l2.jpg" alt="perfume"></div>
+                <div class="checkout-order-extra-info">
+                  <div class="extra-info-title-box"><span class="extra-info-title">تشيز كيك</span></div>
+                  <p class="checkout-order-prcie">$6.99</p>
+                  <svg> 
+                    <use href="../assets/images/icons/icon.svg#deletFromReview"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="counter"><span class="down" onclick="decreaseCount(event, this)">-</span>
+                <input type="text" value="1"><span class="up" onclick="increaseCount(event, this)">+</span>
+              </div>
+            </div>
+            <div class="checkout-order"> 
+              <div class="checkout-order-img-and-extra-info"> 
+                <div class="checkout-order-img"><img class="checkout-perfume-img" src="../assets/images/smoothies5.jpg" alt="perfume"></div>
+                <div class="checkout-order-extra-info">
+                  <div class="extra-info-title-box"><span class="extra-info-title">عصير كوكتيل</span></div>
+                  <p class="checkout-order-prcie">$3.99</p>
+                  <svg> 
+                    <use href="../assets/images/icons/icon.svg#deletFromReview"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="counter"><span class="down" onclick="decreaseCount(event, this)">-</span>
+                <input type="text" value="1"><span class="up" onclick="increaseCount(event, this)">+</span>
+              </div>
+            </div>
+          </div>
+          <div class="checkout-details"> 
+            <p class="checkout-details-title">تفاصيل الطلب</p>
+            <div class="checkout-products-count"> 
+              <p class="checkout-products-count-title">المنتجات<span>(3 منتجات)</span></p>
+              <p class="checkout-products-count-number">$18.97</p>
+            </div>
+            <div class="checkout-total-price"> 
+              <p class="checkout-total-price-title">السعر الكلي</p>
+              <p class="checkout-total-price-count">$18.97</p>
+            </div>
+          </div>
+        </div>
+        <div class="log-page-link"> <a href="../checkout2.html"> 
+            <button type="submit">التالي  </button></a></div>
+      </div>
+    </div>
+    <footer> 
+      <div class="container">
+        <div class="footer-content row">
+          <div class="footer-logo"> <img src="../../assets/images/Logo.png" alt="Logo"></div>
+          <div class="footer-links row">
+            <div class="ft-link"> <a href="../../index.html"> الصفحة الرئيسية</a></div>
+            <div class="ft-link"> <a href="../../products.html"> جميع المنتجات</a></div>
+            <div class="ft-link"> <a href="../../About-us.html"> من نحن</a></div>
+            <div class="ft-link"> <a href="../../contact-us.html"> اتصل بنا</a></div>
+          </div>
+          <div class="footer-social-media row">
+            <div class="social-link"> <a href="http://twitter.com"> <img src="../../assets/images/twitter.webp" alt="twitter"></a></div>
+            <div class="social-link"><a href="http://instagram.com"> <img src="../../assets/images/instagram.webp" alt="instagram"></a></div>
+            <div class="social-link"><a href="https://web.telegram.org/k/"> <img src="../../assets/images/telegram.webp" alt="telegram"></a></div>
+            <div class="social-link"><a href="https://web.whatsapp.com/"> <img src="../../assets/images/whatsapp.webp" alt="whatsapp"></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="copy-right">
+         © Soft Food 2021 All Rights Reserved.</div>
+    </footer>
+    <script src="../../assets/js/jquery-3.6.0.min.js"> </script>
+    <script src="../../assets/js/bootstrap.min.js"> </script>
+    <script src="../../assets/js/owl.carousel.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"> </script>
+    <script src="../../assets/js/script.js"> </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+doctype html
+html(lang="en" dir="rtl")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        include includes/style.pug
+        include includes/pugvars.pug
+        include includes/mixin.pug
+        block pageTitle
+            title Sing in
+    body
+        .sign-container.row
+
+            .col-lg-6.form-log-col 
+                .form-log
+                    h1 تسجيل الدخول 
+                    .form-inputs-box
+                        .form-subject
+                            label(for="emailAddress" , class="label-class") عنوان بريد الكتروني *
+                            input#emailAddress(type="email" , placeholder='أدخل عنوان البريد الالكتروني' )
+                        .form-subject
+                            label(for="passowrd", class="label-class") كلمة المرور *
+                            input#passowrd(type="password",placeholder=" ادخل كلمة المرور" ) 
+                        .remember-me-or-forget-password 
+                            .remember-me-check
+                                input#rememberMeCheck.form-check-input(type='checkbox' value='' checked)
+                                label.form-check-label(for='rememberMeCheck')
+                                    | تذكرني
+                            a(href="../reset-password.html" , class="forget-password") نسيت كلمة المرور ؟
+                    .log-page-link 
+                        button(type="submit")  تسجيل الدخول 
+                    .log-question
+                        span ليس لدي حساب ؟
+                            a(href="../singup.html") أفتح حساب الأن 
+            .col-lg-6.sing-bg
+                
+                

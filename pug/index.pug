@@ -1,0 +1,276 @@
+doctype html
+html(lang="en" dir="rtl")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        include includes/style.pug
+        include includes/pugvars.pug
+        include includes/mixin.pug
+        block pageTitle
+            title Soft Food 
+    body
+        //- Start NavBar 
+
+        include includes/rtl-pages/rtl-header.pug
+        block pageBody
+            //- End NavBar
+            //- Start Slide Section 
+            .collection-slide
+                .owl-carousel.main-owl.main-sec
+                    .item.first-slide
+                        .container
+                            .main-slide-col.col-lg-4
+                                h1.home-title مطعم سوفت فود
+                                .line-home
+                                p.slide-text
+                                    | مطعم سوفت فود لأشهى المأكولات الشهية و المشروبات المنعشة ، طعام مُعد بعناية و اتقان ، يأخذك إلى عالم جديد يستحق التجربة
+                                .btn-discover
+                                    a(href="../products.html") القسم الملكي
+                            .main-slide-col.col-lg-8
+
+                    .item.second-slide
+                        .container
+                            .main-slide-col.col-lg-4
+                                h1.home-title مطعم سوفت فود
+                                .line-home
+                                p.slide-text
+                                    | مطعم سوفت فود لأشهى المأكولات الشهية و المشروبات المنعشة ، طعام مُعد بعناية و اتقان ، يأخذك إلى عالم جديد يستحق التجربة
+                                .btn-discover
+                                    a(href="../products.html") القسم الملكي
+                            .main-slide-col.col-lg-8
+
+            //- End Slide Section  
+            //- Start Sellect Boxes 
+            .sellect-box-section
+                .container
+                    .sellect-box.row
+                        .sel-box.col-md-4
+                            a(href="../products.html" class="sel-link") 
+                                .sel-box-in
+                                    .num-box 
+                                        img.num-bg(src="../assets/images/num-light.png" , alt="num-bg")
+                                        sapn 01
+                                    p.title-box أفضل الأصناف
+                        .sel-box.col-md-4
+                            a(href="../products.html" class="sel-link")   
+                                .sel-box-in
+                                    .num-box 
+                                        img.num-bg(src="../assets/images/num-light.png" , alt="num-bg")
+                                        sapn 02
+                                    p.title-box أفضل الأسعار
+                        .sel-box.col-md-4
+                            a(href="../contact-us.html" class="sel-link")   
+                                .sel-box-in
+                                    .num-box 
+                                        img.num-bg(src="../assets/images/num-light.png" , alt="num-bg")
+                                        sapn 03
+                                    p.title-box دعم على مدار الساعة
+
+            //- End Sellect Boxes 
+            //- Start The Most Ordered Section 
+            .most-order-section#mostOrdered
+                .container 
+                    +sectionIntro("الأكثر طلباً","المنتجات الأكثر طلباً لدى سوفت فود ، تميز معنا")
+                    .most-ordered-boxes.row
+                        .col-sm-6.col-lg-3
+                            .most-order-item 
+                                .most-order-img-box
+                                    .ms-img-box 
+                                        a(href="../product-details.html") 
+                                            img(src="../assets/images/pizza.jpg", alt="Most perfume ordered" , class="img-dims")
+                                .most-content
+                                    .perfume-name-and-size
+                                        .perfume-name بيتزا مارجريتا
+                                        .perfume-size (مُتوفر)
+                                    .perfume-price-box
+                                        .perfume-old-price $11
+                                        .perfume-price $8.99
+                                    button.add-to-cart(onclick="sweetalertclick() ")
+                                        svg.cart 
+                                            use(href="../assets/images/icons/icon.svg#cart")
+                                        p.add-to-cart-title أضف للعربة
+
+                        .col-sm-6.col-lg-3
+                            .most-order-item 
+                                .most-order-img-box
+                                    .ms-img-box 
+                                        a(href="../product-details.html") 
+                                            img(src="../assets/images/smoothies1.jpg", alt="Most perfume ordered" , class="img-dims")
+                                .most-content
+                                    .perfume-name-and-size
+                                        .perfume-name عصير التوت
+                                        .perfume-size (مُتوفر)
+                                    .perfume-price-box
+                                        .perfume-old-price $5
+                                        .perfume-price $3.99
+                                    button.add-to-cart
+                                        svg.cart 
+                                            use(href="../assets/images/icons/icon.svg#cart")
+                                        p.add-to-cart-title أضف للعربة
+
+                        .col-sm-6.col-lg-3
+                            .most-order-item 
+                                .most-order-img-box
+                                    .ms-img-box 
+                                        a(href="../product-details.html") 
+                                            img(src="../assets/images/fruit-salad.jpg", alt="Most perfume ordered" , class="img-dims")
+                                .most-content
+                                    .perfume-name-and-size
+                                        .perfume-name طبق فاكهة فاخر
+                                        .perfume-size (مُتوفر)
+                                    .perfume-price-box
+                                        .perfume-old-price $7
+                                        .perfume-price $5.99
+                                    button.add-to-cart
+                                        svg.cart 
+                                            use(href="../assets/images/icons/icon.svg#cart")
+                                        p.add-to-cart-title أضف للعربة
+
+                        .col-sm-6.col-lg-3
+                            .most-order-item 
+                                .most-order-img-box
+                                    .ms-img-box 
+                                        a(href="../product-details.html") 
+                                            img(src="../assets/images/pancake.jpg", alt="Most perfume ordered" , class="img-dims")
+                                .most-content
+                                    .perfume-name-and-size
+                                        .perfume-name بان كيك
+                                        .perfume-size (مُتوفر)
+                                    .perfume-price-box
+                                        .perfume-old-price $10
+                                        .perfume-price $7.99
+                                    button.add-to-cart  
+                                        svg.cart 
+                                            use(href="../assets/images/icons/icon.svg#cart")
+                                        p.add-to-cart-title أضف للعربة
+            //- End The Most Ordered Section  
+            //- Start Our Categorys Section 
+                
+            .our-categorys 
+                .container 
+                    +sectionIntro("التصنيفات","المنتجات الأكثر طلباً لدى الفايز للعطور، تميز معنا")
+                    .owl-carousel.owl-theme.categorys-owl
+                        .item
+                            a(href="../category.html" , class="category-page-link") 
+                                img(src="../assets/images/smoothies1.jpg",class="categore-img" alt="Categore")
+                                p.category-name المشروبات 
+                        .item
+                            a(href="../category.html" , class="category-page-link")  
+                                img(src="../assets/images/cheesecak.jpg",class="categore-img" alt="Categore")
+                                p.category-name الحلويات
+                        .item
+                            a(href="../category.html" , class="category-page-link")  
+                                img(src="../assets/images/burger.jpg",class="categore-img" alt="Categore")
+                                p.category-name الوجبات  
+                        .item
+                            a(href="../category.html" , class="category-page-link")  
+                                img(src="../assets/images/fruit-salad.jpg",class="categore-img" alt="Categore")
+                                p.category-name سلطةالفاكهة 
+                        .item
+                            a(href="../category.html" , class="category-page-link")  
+                                img(src="../assets/images/greek-salad.jpg",class="categore-img" alt="Categore")
+                                p.category-name سلطة الخضار
+                        .item
+                            a(href="../category.html" , class="category-page-link")  
+                                img(src="../assets/images/panini.jpg",class="categore-img" alt="Categore")
+                                p.category-name ساندويتش
+                            
+                            
+            //- End Our Categorys Section
+
+            //- Start Slide Section Panel
+            .collection-slide.mid-slide
+                img(src="../assets/images/show.jpg", alt="")
+                .container
+                    .slide-row2.row
+                        .slide-col.col-lg-8.col-xl-6 
+                            .sub-bg-box
+                                h2.bg-title برجر مكسيكي
+                                p.discount (خصم 30%) 
+                            p.slide-text
+                                | هلابينو, شيبس, صلصة حارة, بصل, بندورة, خس, جبنة شدر, صلصة ميكرز
+                            .btn-discover
+                                a(href="../products.html") القسم الملكي
+                        .slide-col2.col-lg-4.col-xl-6
+            //- End Slide Section Panel
+            //- Start Recently Added Section 
+            .most-order-section.recently-added
+                .container 
+                    +sectionIntro("المضاف مؤخراً","المنتجات المضافة مؤخراً لدى مطعم سوفت فود")
+                    .most-ordered-boxes.row
+                        .col-sm-6.col-lg-3
+                            .most-order-item 
+                                .most-order-img-box
+                                    .ms-img-box 
+                                        a(href="../product-details.html") 
+                                            img(src="../assets/images/l1.jpg", alt="Most perfume ordered" , class="img-dims")
+                                .most-content
+                                    .perfume-name-and-size
+                                        .perfume-name عصير جوز الهند
+                                        .perfume-size (جديد)
+                                    .perfume-price-box
+                                        .perfume-price $7.99
+                                    button.add-to-cart
+                                        svg.cart 
+                                            use(href="../assets/images/icons/icon.svg#cart")
+                                        p.add-to-cart-title أضف للعربة
+
+                        .col-sm-6.col-lg-3
+                            .most-order-item 
+                                .most-order-img-box
+                                    .ms-img-box 
+                                        a(href="../product-details.html") 
+                                            img(src="../assets/images/l2.jpg", alt="Most perfume ordered" , class="img-dims")
+                                .most-content
+                                    .perfume-name-and-size
+                                        .perfume-name تشيز كيك
+                                        .perfume-size (جديد)
+                                    .perfume-price-box
+                                        .perfume-price $3.55
+                                    button.add-to-cart
+                                        svg.cart 
+                                            use(href="../assets/images/icons/icon.svg#cart")
+                                        p.add-to-cart-title أضف للعربة
+
+                        .col-sm-6.col-lg-3
+                            .most-order-item 
+                                .most-order-img-box
+                                    .ms-img-box 
+                                        a(href="../product-details.html") 
+                                            img(src="../assets/images/l3.jpg", alt="Most perfume ordered" , class="img-dims")
+                                .most-content
+                                    .perfume-name-and-size
+                                        .perfume-name مثلجات بالكرز
+                                        .perfume-size (جديد)
+                                    .perfume-price-box
+                                        .perfume-price $5.99
+                                    button.add-to-cart
+                                        svg.cart 
+                                            use(href="../assets/images/icons/icon.svg#cart")
+                                        p.add-to-cart-title أضف للعربة
+
+                        .col-sm-6.col-lg-3
+                            .most-order-item 
+                                .most-order-img-box
+                                    .ms-img-box 
+                                        a(href="../product-details.html") 
+                                            img(src="../assets/images/l4.jpg", alt="Most perfume ordered" , class="img-dims")
+                                .most-content
+                                    .perfume-name-and-size
+                                        .perfume-name لحم مدخن
+                                        .perfume-size (جديد)
+                                    .perfume-price-box
+                                        .perfume-price $4.99
+                                    button.add-to-cart  
+                                        svg.cart 
+                                            use(href="../assets/images/icons/icon.svg#cart")
+                                        p.add-to-cart-title أضف للعربة
+            //- End Recently Added Section 
+        include includes/footer.pug
+
+
+
+
+            
+        include includes/script.pug

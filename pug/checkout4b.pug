@@ -1,0 +1,34 @@
+extends checkout4.pug
+block test
+    .add-file-content 
+        .form-subject
+            label(for="addFile", class="label-class") السند النكي *
+            label.add-file-box
+                |ارفق السند البنكي
+                input#addFile(type="file")
+                svg 
+                    use(href="../assets/images/icons/icon.svg#addFileSvg")
+            span.file-size  الملف يجب ألا يتعدى (JPEG,PNG,PDF) 10MB
+
+    .file-uploaded-box 
+        .file-uploaded-img-and-info-box 
+            .file-uploaded-img-box
+                img.file-uploaded-img(src="../assets/images/banckimg.png", alt="Img")
+            .file-uploaded-info-box
+                p.file-uploaded-img-name Arabic Bank.png
+                .image-data-and-size 
+                    span.img-size 1.2MB
+                        |.
+                    span.img-data 4 April 2022
+        svg 
+            use(href="../assets/images/icons/icon.svg#delete")
+
+
+block checkoutBtn
+    .checkout-btn-box
+        .log-page-link.prev-btn-checkout
+            a(href="../checkout4.html") 
+                button(type="submit") السابق  
+        .log-page-link
+            a(href="../done.html") 
+                button(type="submit") تأكيد  

@@ -1,0 +1,111 @@
+div(class="nav-bar")
+    div(class="container")
+        
+        nav.navbar.navbar-expand-lg
+            .container-fluid
+                a.navbar-brand(href='#')
+                    img(src="../assets/images/Logo.png", alt="Logo", class="logo-dims")
+                button.navbar-toggler.toggle.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+                    span
+                    span
+                    span
+                #navbarSupportedContent.collapse.navbar-collapse
+                    ul.navbar-nav.mb-2.mb-lg-0
+                        li.nav-item.active
+                            a.nav-link(aria-current='page' href='../../../index.html') الصفحة الرئيسية
+                        li.nav-item
+                            a.nav-link(href='../../../products.html') جميع المنتجات
+                        li.nav-item
+                            a.nav-link(href='../../../About-us.html') من نحن
+                        li.nav-item
+                            a.nav-link(href='../../../contact-us.html') اتصل بنا
+                    form.d-flex
+                        block nav-log-or-profile
+                            a.login-btn(href="../../../singup.html") تسجيل الدخول
+                            
+                        .nav-svg 
+                            img(src="../assets/images/flag.webp", alt="flag" class="flag")
+                            svg.search
+                                use(href="../assets/images/icons/icon.svg#search")
+                            .nav-cart-box
+                                .cart-icon-box(onclick="showCart()")
+                                    p 3
+                                    svg.nav-cart 
+                                        use(href="../assets/images/icons/icon.svg#nav-cart")
+                                .cart-body 
+                                    h3.cart-title عربتي
+                                    .cart-line 
+                                    .all-products-in-cart
+                                        //- Start Product 
+                                        .products-in-cart-box.row 
+                                            .col-5
+                                                .in-cart-img 
+                                                    img(src="../../../assets/images/burger.jpg", alt="perfume" , class="img-dims")
+                                            .col-7.in-cart-info-box 
+                                                .in-cart-info
+                                                    .in-cart-name-and-price
+                                                        span.product-name-in-cart برجر
+                                                        span.product-price-in-cart $13.99
+                                                    svg.delete-from-cart 
+                                                        use(href="../assets/images/icons/icon.svg#delete")
+                                                .counter
+                                                    span.down(onclick='decreaseCount(event, this)') -
+                                                    input(type='text' value='1')
+                                                    span.up(onclick='increaseCount(event, this)') +
+                                        //- End Product 
+                                        //- 
+                                        //- 
+                                        //- Start Product 
+                                        
+                                        .products-in-cart-box.row 
+                                            .col-5
+                                                .in-cart-img 
+                                                    img(src="../../../assets/images/pizza.jpg", alt="perfume" , class="img-dims")
+                                            .col-7.in-cart-info-box 
+                                                .in-cart-info
+                                                    .in-cart-name-and-price
+                                                        span.product-name-in-cart بيتزا مارجريتا
+                                                        span.product-price-in-cart $8.99
+                                                    svg.delete-from-cart 
+                                                        use(href="../assets/images/icons/icon.svg#delete")
+                                                .counter
+                                                    span.down(onclick='decreaseCount(event, this)') -
+                                                    input(type='text' value='1')
+                                                    span.up(onclick='increaseCount(event, this)') +
+                                        //- End Product 
+                                        //- 
+                                        //- 
+                                        //- Start Product 
+                                        
+                                        .products-in-cart-box.row 
+                                            .col-5
+                                                .in-cart-img 
+                                                    img(src="../../../assets/images/smoothies1.jpg", alt="perfume" , class="img-dims")
+                                            .col-7.in-cart-info-box 
+                                                .in-cart-info
+                                                    .in-cart-name-and-price
+                                                        span.product-name-in-cart عصير التوت
+                                                        span.product-price-in-cart $3.99
+                                                    svg.delete-from-cart 
+                                                        use(href="../assets/images/icons/icon.svg#delete")
+                                                .counter
+                                                    span.down(onclick='decreaseCount(event, this)') -
+                                                    input(type='text' value='1')
+                                                    span.up(onclick='increaseCount(event, this)') +
+                                        //- End Product 
+                                    .cart-line 
+                                    .sub-price-and-delivery-box 
+                                        span.sub-price-and-delivery-title المجموع الفرعي
+                                        span.sub-price-and-delivery-price $26.97
+                                    .sub-price-and-delivery-box  
+                                        span.sub-price-and-delivery-title تكلفة التوصيل
+                                        span.sub-price-and-delivery-price $5.00
+                                    .cart-line 
+                                    .total-price-box 
+                                        span.total-price-title السعر الكلي
+                                        span.total-price $31.97
+                                    .order-now
+                                        a(href="#") الشراء الأن 
+
+
+                                        

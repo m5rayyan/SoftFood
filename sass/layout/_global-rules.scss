@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Noto+Kufi+Arabic:wght@400;500;600&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200;300;400;500;600;700;800;900&family=Noto+Kufi+Arabic:wght@400;500;600&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200;300;400;500;600;700;800;900&family=Noto+Kufi+Arabic:wght@400;500;600&family=Reem+Kufi&family=Roboto:wght@500&display=swap');
+@font-face {
+    font-family: KufiLT;
+    src: url(../../H1Font/KufiLT.woff2);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Almarai, Arial, Helvetica;
+}
+
+// Start Dirction
+$lf: left;
+$rt: right;
+$dir:ltr;
+@if $dir==rtl {
+    $lf: right;
+    $rt: left;
+}
+
+// End Dirction
+//Start Media
+$min_phone:"min-width:576px";
+$max_phone:"max-width:575px";
+$max_tablet: "max-width:767px";
+$min_tablet: "min-width:768px";
+$max_desktop: "max-width:991px";
+$min_desktop: "min-width:992px";
+$lg-desktop: "max-width:1199px";
+$min-lg-desktop: "min-width:1200px";
+//End Media
+a {
+    text-decoration: none;
+}

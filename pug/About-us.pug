@@ -1,0 +1,56 @@
+extends profile-my-info.pug
+block pageTitle
+    title من نحن
+block pageBody 
+    .path-page
+        .container 
+            block pathTitle 
+                .path-title.products-title
+                    h2.all-products-titl من نحن
+    block pageContent
+        .about-us-page-content
+            .container
+                #accordionExample.accordion
+                    .accordion-item
+                        h2#headingOne.accordion-header
+                            button.accordion-button(type='button' data-bs-toggle='collapse' data-bs-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne')
+                                | من سوفت فود
+                        #collapseOne.accordion-collapse.collapse.show(aria-labelledby='headingOne' data-bs-parent='#accordionExample')
+                            .accordion-body
+                                p مطعم سوفت فود لأشهى المأكولات 
+                                p وجبات فاخرة مصنوعة بكل حب حتى نضمن رضاك 
+                                p أجود الأكلات الشرقية و الغربية
+
+                    .accordion-item
+                        h2#headingTwo.accordion-header
+                            button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo')
+                                | رؤيتنا
+                        #collapseTwo.accordion-collapse.collapse(aria-labelledby='headingTwo' data-bs-parent='#accordionExample')
+                            .accordion-body
+                                p أن تكون لنا الصدارة في عالم المطاعم, وأن يصبح اسمنا الخيار الوحيد المفضل والمميز  لجميع الأذواق والأطياف في أنحاء المعمورة
+                    .accordion-item
+                        h2#headingThree.accordion-header
+                            button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree')
+                                | أهدافنا
+                        #collapseThree.accordion-collapse.collapse(aria-labelledby='headingThree' data-bs-parent='#accordionExample')
+                            .accordion-body
+                                p أن نغلب المستحيل ونجعل رضى الناس غاية تدرك ، ونصبح الإسم اللامع في مجال المطاعم في فلسطين والعالم
+                    .accordion-item
+                        h2#headingFour.accordion-header
+                            button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseFour' aria-expanded='false' aria-controls='collapseFour')
+                                |كيف نعمل ؟
+                        #collapseFour.accordion-collapse.collapse(aria-labelledby='headingFour' data-bs-parent='#accordionExample')
+                            .accordion-body
+                                p نختار أجود أنواع الطعام و العصائر لنقدمها لك بكل أناقة وفخامة ، من خلال مطعمنا المميز يمكنك إستعراض منتجاتنا
+
+                    .accordion-item
+                        h2#headingFive.accordion-header
+                            button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseFive' aria-expanded='false' aria-controls='collapseFive')
+                                |كيف تتواصل معنا
+                        #collapseFive.accordion-collapse.collapse(aria-labelledby='headingFive' data-bs-parent='#accordionExample')
+                            .accordion-body
+                                p العنوان : ​عمارة فلان - الرمال - غزة - فلسطين
+
+                                p    واتس اب  فرع غزة 22091993
+                                p    واتس اب  فرع القدس 99091993 
+                                p    أوقات العمل السبت إلى الجمعة -مفتوح 24 ساعة

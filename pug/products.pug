@@ -1,0 +1,230 @@
+extends index.pug
+block pageTitle
+    title المنتجات
+block pageBody 
+    .path-page
+        .container 
+            block pathTitle 
+                .path-title.products-title
+                    h2.all-products-titl جميع المنتجات
+                    span.products-number 144 منتج
+                    
+    block pageContent
+        .all-products-box
+            .container 
+                .all-products-content
+                    .products-filter-box 
+                        input.productsSearch(type="search", placeholder="ابحث عن ..")
+                        .categories-search-body 
+                            .categories-search-title التصنيفات
+                                p.categ-arrow &#x2039;
+                            
+                            
+                            .categories-search-box
+                                .categories-search-content
+                                    input.categ-filter(type="checkbox" checked)
+                                    p.categ-name الوجبات
+                                    p.categ-number 30
+                                .categories-search-content
+                                    input.categ-filter(type="checkbox")
+                                    p.categ-name المشروبات
+                                    p.categ-number 20
+                                .categories-search-content
+                                    input.categ-filter(type="checkbox")
+                                    p.categ-name الحلويات
+                                    p.categ-number 3
+                                .categories-search-content
+                                    input.categ-filter(type="checkbox")
+                                    p.categ-name سلطة الفاكهة
+                                    p.categ-number 10
+                                .categories-search-content
+                                    input.categ-filter(type="checkbox")
+                                    p.categ-name ساندويتش
+                                    p.categ-number 14
+                                .categories-search-content
+                                    input.categ-filter(type="checkbox")
+                                    p.categ-name سلطة الخضار
+                                    p.categ-number 3
+                                .categories-search-content
+                                    input.categ-filter(type="checkbox")
+                                    p.categ-name المجموعات
+                                    p.categ-number 10
+                                select#selctProductName
+                                    option(value="defult") اسم المنتج --
+                                    option(value="برجر") برجر
+                                    option(value="برجر") برجر
+                                    option(value="برجر") برجر
+                                    option(value="برجر") برجر
+                                .wrapper
+                                    p.range-price السعر
+                                    .range-container
+                                        .slider-track
+                                        input#slider-1(type='range' min='0' max='1000' value='10' oninput='slideOne()')
+                                        input#slider-2(type='range' min='0' max='1000' value='150' oninput='slideTwo()')
+                                    .values
+                                        .range-box
+                                            span#range1
+                                                | 0
+                                        span  -
+                                        .range-box
+                                            span#range2
+                                                | 100
+                    //- Start The Most Ordered Section 
+                    .most-order-section#mostOrdered
+                        .container 
+                            .most-ordered-boxes.row
+                                .col-sm-6.col-lg-4.col-xl-3
+                                    .most-order-item 
+                                        .most-order-img-box
+                                            .ms-img-box 
+                                                a(href="../product-details.html") 
+                                                    img(src="../assets/images/burger.jpg", alt="Most perfume ordered" , class="img-dims")
+                                        .most-content
+                                            .perfume-name-and-size
+                                                .perfume-name برجر
+                                                .perfume-size (مُتوفر)
+                                            .perfume-price-box
+                                                .perfume-old-price $17
+                                                .perfume-price $13.99
+                                            button.add-to-cart
+                                                svg.cart 
+                                                    use(href="../assets/images/icons/icon.svg#cart")
+                                                p.add-to-cart-title أضف للعربة
+                                .col-sm-6.col-lg-4.col-xl-3
+                                    .most-order-item 
+                                        .most-order-img-box
+                                            .ms-img-box 
+                                                a(href="../product-details.html") 
+                                                    img(src="../assets/images/burger.jpg", alt="Most perfume ordered" , class="img-dims")
+                                        .most-content
+                                            .perfume-name-and-size
+                                                .perfume-name برجر
+                                                .perfume-size (مُتوفر)
+                                            .perfume-price-box
+                                                .perfume-old-price $17
+                                                .perfume-price $13.99
+                                            button.add-to-cart  
+                                                svg.cart 
+                                                    use(href="../assets/images/icons/icon.svg#cart")
+                                                p.add-to-cart-title أضف للعربة
+                                .col-sm-6.col-lg-4.col-xl-3
+                                    .most-order-item 
+                                        .most-order-img-box
+                                            .ms-img-box 
+                                                a(href="../product-details.html") 
+                                                    img(src="../assets/images/burger.jpg", alt="Most perfume ordered" , class="img-dims")
+                                        .most-content
+                                            .perfume-name-and-size
+                                                .perfume-name برجر
+                                                .perfume-size (مُتوفر)
+                                            .perfume-price-box
+                                                .perfume-old-price $17
+                                                .perfume-price $13.99
+                                            button.add-to-cart
+                                                svg.cart 
+                                                    use(href="../assets/images/icons/icon.svg#cart")
+                                                p.add-to-cart-title أضف للعربة
+
+                                .col-sm-6.col-lg-4.col-xl-3
+                                    .most-order-item 
+                                        .most-order-img-box
+                                            .ms-img-box 
+                                                a(href="../product-details.html") 
+                                                    img(src="../assets/images/burger.jpg", alt="Most perfume ordered" , class="img-dims")
+                                        .most-content
+                                            .perfume-name-and-size
+                                                .perfume-name برجر
+                                                .perfume-size (مُتوفر)
+                                            .perfume-price-box
+                                                .perfume-old-price $17
+                                                .perfume-price $13.99
+                                            button.add-to-cart
+                                                svg.cart 
+                                                    use(href="../assets/images/icons/icon.svg#cart")
+                                                p.add-to-cart-title أضف للعربة
+                                .col-sm-6.col-lg-4.col-xl-3
+                                    .most-order-item 
+                                        .most-order-img-box
+                                            .ms-img-box 
+                                                a(href="../product-details.html") 
+                                                    img(src="../assets/images/burger.jpg", alt="Most perfume ordered" , class="img-dims")
+                                        .most-content
+                                            .perfume-name-and-size
+                                                .perfume-name برجر
+                                                .perfume-size (مُتوفر)
+                                            .perfume-price-box
+                                                .perfume-old-price $17
+                                                .perfume-price $13.99
+                                            button.add-to-cart
+                                                svg.cart 
+                                                    use(href="../assets/images/icons/icon.svg#cart")
+                                                p.add-to-cart-title أضف للعربة
+
+                                .col-sm-6.col-lg-4.col-xl-3
+                                    .most-order-item 
+                                        .most-order-img-box
+                                            .ms-img-box 
+                                                a(href="../product-details.html") 
+                                                    img(src="../assets/images/burger.jpg", alt="Most perfume ordered" , class="img-dims")
+                                        .most-content
+                                            .perfume-name-and-size
+                                                .perfume-name برجر
+                                                .perfume-size (مُتوفر)
+                                            .perfume-price-box
+                                                .perfume-old-price $17
+                                                .perfume-price $13.99
+                                            button.add-to-cart  
+                                                svg.cart 
+                                                    use(href="../assets/images/icons/icon.svg#cart")
+                                                p.add-to-cart-title أضف للعربة
+                                .col-sm-6.col-lg-4.col-xl-3
+                                    .most-order-item 
+                                        .most-order-img-box
+                                            .ms-img-box 
+                                                a(href="../product-details.html") 
+                                                    img(src="../assets/images/burger.jpg", alt="Most perfume ordered" , class="img-dims")
+                                        .most-content
+                                            .perfume-name-and-size
+                                                .perfume-name برجر
+                                                .perfume-size (مُتوفر)
+                                            .perfume-price-box
+                                                .perfume-old-price $17
+                                                .perfume-price $13.99
+                                            button.add-to-cart
+                                                svg.cart 
+                                                    use(href="../assets/images/icons/icon.svg#cart")
+                                                p.add-to-cart-title أضف للعربة
+                                .col-sm-6.col-lg-4.col-xl-3
+                                    .most-order-item 
+                                        .most-order-img-box
+                                            .ms-img-box 
+                                                a(href="../product-details.html") 
+                                                    img(src="../assets/images/burger.jpg", alt="Most perfume ordered" , class="img-dims")
+                                        .most-content
+                                            .perfume-name-and-size
+                                                .perfume-name برجر
+                                                .perfume-size (مُتوفر)
+                                            .perfume-price-box
+                                                .perfume-old-price $17
+                                                .perfume-price $13.99
+                                            button.add-to-cart
+                                                svg.cart 
+                                                    use(href="../assets/images/icons/icon.svg#cart")
+                                                p.add-to-cart-title أضف للعربة
+                            nav(aria-label='Page navigation example')
+                                ul.pagination
+                                    li.page-item
+                                        a.page-link.go-to(href='#' aria-label='Previous')
+                                            span(aria-hidden='true') &#x2039;
+                                    li.page-item
+                                        a.page-link(href='#') 1
+                                    li.page-item
+                                        a.page-link(href='#') 2
+                                    li.page-item
+                                        a.page-link(href='#') 3
+                                    li.page-item
+                                        a.page-link.go-to(href='#' aria-label='Next')
+                                            span(aria-hidden='true') &#x203A;
+                    //- End The Most Ordered Section 
+
+        
